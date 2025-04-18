@@ -1,0 +1,296 @@
+header img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+body {
+    font-family: 'Inknut Antiqua', serif;
+    color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    display: grid;
+    width: 1400px;
+    margin: 50px auto 0 auto;
+    gap: 10px;
+    grid-template-columns: repeat(2, 700px);
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "imagen texto"
+        "descripcion botones";
+}
+
+/* Asignar áreas a cada bloque */
+.imagen-container {
+    grid-area: imagen;
+}
+
+.texto-arriba-derecha {
+    grid-area: texto;
+}
+
+.texto-abajo-izquierda {
+    grid-area: descripcion;
+}
+
+.botones {
+    grid-area: botones;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imagen del producto */
+.imagen {
+    margin-top: 37.5px;
+    margin-left: 50px;
+    border: 1px solid #333;
+    width: 600px;
+    height: 350px;
+    object-fit: contain;
+}
+
+/* Texto derecho arriba */
+.texto-arriba-derecha {
+    font-size: 14px;
+    text-align: left;
+}
+
+.texto-arriba-derecha h1 {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+.texto-arriba-derecha h2 {
+    font-size: 18px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.texto-arriba-derecha h3 {
+    font-size: 16px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 37.5px;
+}
+
+.texto-arriba-derecha ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* Texto inferior izquierdo */
+.texto-abajo-izquierda {
+    font-size: 14px;
+}
+
+.texto-abajo-izquierda h1 {
+    font-size: 20px;
+    margin-top: 37.5px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.texto-abajo-izquierda p {
+    font-size: 14px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 37.5px;
+}
+
+/* Botones */
+.boton {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #0046AA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Inknut Antiqua', serif;
+    width: 600px;
+}
+
+.boton2 {
+    margin-bottom: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #006AFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Inknut Antiqua', serif;
+    width: 600px;
+}
+
+.boton:hover {
+    background-color: #A9CDFF;
+    color: black;
+}
+
+.boton2:hover {
+    background-color: #A9CDFF;
+    color: black;
+}
+
+/* Rectángulo del footer */
+.rectangulo-footer {
+    width: 1215px;
+    height: 148px;
+    background-color: #559BFE; /* Azul */
+    margin: 20px auto; /* Centrado horizontal */
+    border-radius: 20px; /* Bordes curvos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor de redes sociales */
+.redes-sociales {
+    display: flex;
+    justify-content: space-around; /* Distribuye los botones */
+    align-items: center;
+    width: 80%;
+}
+
+/* Estilos de los enlaces */
+.redes-sociales a {
+    text-decoration: none;
+    color: #002355;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos de las imágenes */
+.redes-sociales img {
+    width: 50px; /* Tamaño de los íconos */
+    height: 50px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover */
+.redes-sociales a:hover img {
+    transform: scale(1.1); /* Hace el ícono más grande al pasar el mouse */
+}
+
+/* Estilo para el pie de página */
+.pie-footer {
+    background-color: #559BFE;
+    color: #002355; /* Color del texto */
+    font-weight: bold; /* Negrita para el texto */
+    text-decoration: underline; /* Subraya el texto */
+    padding: 20px 10px; /* Espacio interno del pie de página */
+    text-align: center; /* Centra el texto */
+    font-size: 14px; /* Tamaño del texto */
+    margin: 5px 0; /* Espacio entre el pie de página y otros elementos */
+    border-radius: 10px; /* Bordes redondeados */   
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+
+    header img {
+        height: 200px; /* Reduce la altura de la imagen del encabezado */  
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .imagen-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagen {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        border: 1px solid #333;
+    }
+
+    .texto-arriba-derecha,
+    .texto-abajo-izquierda {
+        padding: 10px;
+    }
+
+    .texto-arriba-derecha h1,
+    .texto-arriba-derecha h2,
+    .texto-arriba-derecha h3,
+    .texto-abajo-izquierda h1,
+    .texto-abajo-izquierda p {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    .texto-arriba-derecha ul {
+        margin-left: 20px;
+    }
+
+    .botones {
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .boton,
+    .boton2 {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .rectangulo-footer {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .redes-sociales {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .pie-footer {
+        font-size: 12px;
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .redes-sociales a {
+        font-size: 12px;
+    }
+
+    .redes-sociales img {
+        width: 40px;
+        height: 40px;
+    }
+}
