@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gracias por tu mensaje</title>
+    <!-- Icono de la pestaña del navegador -->
+    <link rel="icon" href="/21.ico" type="image/x-icon">
+    <meta http-equiv="refresh" content="5; url=/index.html">  <!--Redirige a la página principal después de 5 segundos -->
+
+    <!-- Encabezado del sitio -->
+    <header>
+        <!-- Logo del sitio -->
+        <img src="/logo21.png" alt="Logo AT21">
+    </header>
+
+    <style>
+       /* Estilo para la imagen del encabezado */
+header img {
+    width: 100%;   /* La imagen ocupa el ancho completo del contenedor */
+    height: 400px; /* Altura fija de la imagen */
+    object-fit: cover; /* Ajusta la imagen para que no se distorsione */
+    display: block;  /* Elimina espacios extra debajo de la imagen */
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Inknut Antiqua', serif; /* Fuente personalizada */
+    color: #002355; /* Color principal del texto */
+}
+
+/* Estilo para el título principal */
+h1 {
+    text-align: center; /* Centra el texto */
+    font-size: 2.5em; /* Tamaño de fuente grande */
+    font-weight: bold; /* Negrita para el título */
+    margin-top: 40px; /* Espacio superior */
+    color: #002355; /* Color del texto */
+}
+
+/* Estilo para centrar y agrandar los párrafos */
+p {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 10px 20px;
+}
+
+/* Estilo para el pie de página */
+.pie-footer {
+    background-color: #559BFE;
+    color: #002355; /* Color del texto */
+    font-weight: bold; /* Negrita para el texto */
+    text-decoration: underline; /* Subraya el texto */
+    padding: 20px 10px; /* Espacio interno del pie de página */
+    text-align: center; /* Centra el texto */
+    font-size: 14px; /* Tamaño del texto */
+    margin: 5px 0; /* Espacio entre el pie de página y otros elementos */
+    border-radius: 10px; /* Bordes redondeados */   
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ajustar la imagen del encabezado */
+    header img {
+        height: 200px; /* Reducimos la altura para pantallas pequeñas */
+    }
+
+    /* Cambiar el layout del main a vertical */
+    main {
+        flex-direction: column; /* De columnas a filas (stacked) */
+        height: auto; /* Altura automática para que se adapte al contenido */
+    }
+}
+    </style>
+</head>
+<body>
+    <h1>¡Gracias por contactarnos!</h1>
+    <p>Tu mensaje ha sido enviado exitosamente.</p>
+    <p>Serás redirigido a la página principal en unos segundos...</p>
+    <footer>
+        <div class="pie-footer">
+            <p>2025 Artículos Tecnológicos 21.</p>
+            </div>
+    </footer>
+</body>
+</html>
