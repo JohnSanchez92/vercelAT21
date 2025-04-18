@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Administrador de Usuarios</title>
+  <!-- Icono de la pestaña del navegador -->
+  <link rel="icon" href="/21.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/adminUsuariosStyle.css">
+  <!-- Fuente personalizada desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="/logo21.png" alt="Logo AT21">
+    </header>
+
+  <div class="contenedor-principal">
+
+    <!-- Parte del administrador Nombre, Rol, lado izquierdo -->
+    <section class="sidebar">
+      <div class="tarjeta-usuario">
+        <img src="/perfil.jpg" alt="Avatar del usuario" class="avatar-usuario">
+        <div class="info-usuario">
+          <h3>jhon sanchez</h3>
+          <p>Rol: Administrador</p>
+          <p>Email: john.sanchez@at21.com</p>
+          <button class="btn-ver-perfil">Ver perfil</button>
+        </div>
+      </div>
+      <nav class="navegacion">
+        <button>Ver activos</button>
+        <button>Ventas</button>
+        <button>Inventarios</button>
+        <button class="activo">Ver usuarios</button>
+      </nav>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+      <h1>Gestión de Usuarios</h1>
+      <div class="buscador-usuarios">
+        <input type="text" placeholder="Buscar usuario..." />
+        <button type="button">Buscar</button>
+      </div>
+
+      <table class="tabla-usuarios">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Rol</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí irán las filas dinámicas o de ejemplo -->
+          <tr>
+            <td>001</td>
+            <td>Juan Pérez</td>
+            <td>Administrador</td>
+            <td>juan@tecart.com</td>
+            <td>
+              <button class="editar">Editar</button>
+              <button class="eliminar">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>María Gómez</td>
+            <td>Vendedor</td>
+            <td>maria@tecart.com</td>
+            <td>
+              <button class="editar">Editar</button>
+              <button class="eliminar">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>Raquel mora</td>
+            <td>Proveedor</td>
+            <td>Rmora@hotmail.com</td>
+            <td>
+              <button class="editar">Editar</button>
+              <button class="eliminar">Eliminar</button>
+            </td> 
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+  </div>
+  <footer>
+    <div class="pie-footer">
+      <p>2025 Artículos Tecnológicos 21.</p>
+      </div>
+  </footer>
+  <script src="/adminUsuariosScript.js" defer></script>
+</body>
+</html>
