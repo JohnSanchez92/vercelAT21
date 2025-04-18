@@ -24,7 +24,7 @@ formLogin.addEventListener("submit", function (e) {
 });
 
 // FORMULARIO DE REGISTRO
-const formRegistro = document.querySelector("form[action='../index.html']");
+const formRegistro = document.getElementById("registroForm");
 
 formRegistro.addEventListener("submit", function (e) {
   e.preventDefault(); // Detener redirección por el method GET
@@ -48,6 +48,8 @@ formRegistro.addEventListener("submit", function (e) {
   usuarios.push(nuevoUsuario);
   localStorage.setItem("usuariosAT21", JSON.stringify(usuarios));
 
-  alert("Usuario registrado exitosamente. Ahora puedes iniciar sesión.");
-  formRegistro.reset();
+  localStorage.setItem("nombreUsuario", nuevoUsuario.nombres);
+
+  alert(`¡Registro exitoso, ${nuevoUsuario.nombres}!`);
+  window.location.href = "index.html"; // Redirección
 });
